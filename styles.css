@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="date"],
+button,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.search-sort {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button.edit,
+button.delete {
+    margin: 0 5px;
+}
+
+/* Estilos específicos para o botão Gerar PDF */
+button#btnGerarPDF {
+    background-color: #28a745; /* Verde para indicar sucesso */
+    color: #fff;
+}
+
+button#btnGerarPDF:hover {
+    background-color: #218838; /* Verde escuro para o hover */
+}
+
+/* Estilos para o agrupamento e alinhamento dos campos de data e botão */
+.date-range-pdf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.date-range {
+    display: flex;
+    gap: 15px;
+}
+
+.date-range label {
+    margin: 0 5px;
+}
+
+.date-range input {
+    width: auto;
+    max-width: 150px;
+}

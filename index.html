@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Exames</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Exames</h1>
+        <form id="formulario">
+            <label for="nomeAnimal">Nome do Animal:</label>
+            <input type="text" id="nomeAnimal" required>
+
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" required>
+
+            <label for="nomeTutor">Nome do Tutor:</label>
+            <input type="text" id="nomeTutor" required>
+
+            <label for="laboratorio">Laboratório de Apoio:</label>
+            <input type="text" id="laboratorio" required>
+
+            <label for="exame">Exame Enviado:</label>
+            <input type="text" id="exame" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+
+            <button type="submit">Adicionar Exame</button>
+            <button type="button" id="btnEditar" style="display:none;">Salvar Edição</button>
+        </form>
+
+        <div class="search-sort">
+            <input type="text" id="searchInput" placeholder="Pesquisar por Código, Nome do Animal ou Nome do Tutor">
+            <select id="sortSelect">
+                <option value="codigo">Ordenar por Código</option>
+                <option value="data">Ordenar por Data</option>
+            </select>
+        </div>
+
+        <!-- Campos para selecionar intervalo de datas e botão para gerar o PDF -->
+        <div class="date-range-pdf">
+            <div class="date-range">
+                <label for="startDate">Data de Início:</label>
+                <input type="date" id="startDate">
+
+                <label for="endDate">Data de Término:</label>
+                <input type="date" id="endDate">
+            </div>
+
+            <button type="button" id="btnGerarPDF">Gerar PDF</button>
+            <button type="button" id="btnGerarRelatorio">Gerar Relatório</button>
+        </div>
+
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome do Animal</th>
+                    <th>Código</th>
+                    <th>Nome do Tutor</th>
+                    <th>Laboratório de Apoio</th>
+                    <th>Exame Enviado</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Registros serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Inclusão da biblioteca jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Seu arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
